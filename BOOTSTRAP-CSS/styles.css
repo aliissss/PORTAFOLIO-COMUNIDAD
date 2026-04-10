@@ -1,0 +1,304 @@
+:root {
+    --negro: #212121;
+    --primario: #ffc107;   
+    --secundario: #097516; 
+    --gris: #757575;
+    --grisClaro: #e1e1e1;
+    --blanco: #fffefe; 
+}
+
+html {
+    font-size: 62.5%; /* 10px = 1rem */
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Krub', sans-serif; 
+    line-height: 1.5;
+    background-color: #f5f5f5;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--negro);
+    margin: 2rem 0;
+}
+.titulo span {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+/* --- 1. NAVEGACIÓN --- */
+.nav-bg { background-color: var(--secundario) !important; }
+
+/* Personalizacion de los enlaces de Bootstrap */
+.navegacion-principal .nav-link {
+    color: var(--blanco) !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.5rem 2rem !important;
+    text-align: center;
+    transition: all .3s ease;
+}
+.navegacion-principal .nav-link:hover {
+    background-color: var(--primario);
+    color: var(--negro) !important;
+}
+
+/* --- 2. HERO --- */
+.hero {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0) 100%), url(esimez.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+}
+.titulo-hero { 
+    color: var(--blanco); 
+    font-size: 4.5rem; 
+    font-weight: 700;
+    margin: 0;
+}
+.titulo-hero span { 
+    color: var(--primario); 
+    display: block;
+}
+
+
+.contenido-hero p {
+    color: var(--blanco);
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.boton, .boton-hero {
+    display: inline-block; /* Para que el padding funcione correctamente */
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton:hover, .boton-hero:hover {
+    background-color: var(--primario);
+    color: var(--negro);
+    transform: scale(1.02);
+}
+/* --- 3. CAJAS DE DISEÑO--- */
+
+.semestre-cajas, .reseña-item, .bloque-lateral, .formulario {
+    background-color: var(--blanco);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+    border-top: 6px solid var(--primario);
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--blanco);
+    border-radius: 1rem;
+}
+
+.servicio h3, .bloque-lateral h3, .semestre-cajas h3 {
+    color: var(--secundario);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- 4. FORMULARIO --- */
+.formulario legend {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secundario);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+.campo { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+.campo label { font-weight: 700; font-size: 1.6rem; margin-bottom: .5rem; }
+.campo input, .campo textarea {
+    padding: 1rem;
+    border: 1px solid var(--grisClaro);
+    border-radius: .5rem;
+    background-color: #f9f9f9;
+}
+
+/* Radio Buttons */
+.opcion-radio { display: flex; align-items: center; gap: 1rem; }
+.opcion-radio input { width: 1.8rem; height: 1.8rem; cursor: pointer; }
+
+/* --- 5. SIDEBAR Y NOTICIAS --- */
+.noticia-corta {
+    border-bottom: 1px solid var(--grisClaro);
+    padding: 1rem 0;
+}
+.noticia-corta:last-child { border-bottom: none; }
+
+.calendario-placeholder img {
+    border-radius: .5rem;
+    transition: transform .3s ease;
+}
+.calendario-placeholder img:hover {
+        transform: scale(1.02); /* pequeño zoom al pasar el mouse */
+        filter: brightness(0.9); /* Lo oscurece un poco */
+}
+
+/* --- 6. MATERIAS --- */
+
+.semestre-cajas {
+    background-color: var(--blanco);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    height: 100%; /* Para que todas las cajas midan lo mismo en la fila */
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--primario);
+}
+
+.semestre-cajas:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+/* Elevación al pasar el mouse */
+
+.semestre-cajas h3 {
+    color: var(--secundario);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--grisClaro);
+    padding-bottom: 1rem;
+}
+
+/* Estilos para la lista de materias */
+.lista-materias {
+    list-style: none; /* quita los puntos de la lista */
+    padding: 0;
+}
+
+.lista-materias li {
+    margin-bottom: 1.2rem;
+}
+
+.link-materia {
+    text-decoration: none;
+    color: var(--negro);
+    display: flex;     
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.link-materia:hover {
+    color: var(--secundario);
+    font-weight: 700;
+}
+
+/* Icono antes de la materia */
+.link-materia::before {
+    content: '→';
+    margin-right: 1rem;
+    color: var(--primario);
+    font-weight: bold;
+}
+
+/* --- 7. PROFESORES --- */
+.busqueda {
+    display: flex;
+    background-color: var(--blanco);
+    border-radius: 5rem; 
+    padding: 0.5rem;
+    border: 1px solid var(--grisClaro);
+}
+
+.busqueda input {
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    background: transparent;
+}
+
+.buscar-boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    border-radius: 5rem; 
+    transition: background-color .3s ease;
+}
+
+.buscar-boton:hover {
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+.reseña-item {
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-top: 4px solid var(--primario); 
+    transition: transform .2s ease;
+}
+
+.reseña-encabezado h4 {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    color: var(--secundario); 
+}
+
+.nota {
+    font-weight: bold;
+    font-size: 1.6rem;
+    background-color: #fdf2d2; 
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.materia-txt {
+    font-size: 1.4rem;
+    color: var(--gris);
+}
+
+.opinion-txt {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: var(--negro);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.recomendacion {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.recomendacion.si { color: #2e7d32; } 
+.recomendacion.no { color: #c62828; }
+
+.fecha {
+    font-size: 1.2rem;
+    color: var(--gris);
+}
+
+/* --- 8. FOOTER --- */
+footer {
+    background-color: var(--negro);
+    padding: 3rem 0;
+    color: var(--blanco);
+    text-align: center;
+}
