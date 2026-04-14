@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad ICE - ESIMEZ</title>
+
+    <!--Conexion con la librería de estilos de Bootstrap-->    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--<link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="py-4 bg-white text-center"> <!--franja blanca centrada con espacio arriba y abajo-->
+        <h1 class="display-4 fw-bold">COMUNIDAD ICE <span class="text-muted fs-4">ESIMEZ</span></h1> <!--título grande y resaltado para "COMUNIDAD ICE" y un subtítulo gris más pequeño para "ESIMEZ"-->
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark nav-bg sticky-top"> <!--menú que se mantiene visible-->
+        <div class="container"> <!--envolver y centrar el contenido-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"> <!--disparador que abre el menú desplegable-->
+                <span class="navbar-toggler-icon"></span> <!--Dibuja el icono de las tres líneas-->
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal"> <!--contenedor "invisible" en móviles-->
+                <div class="navbar-nav w-100 justify-content-between navegacion-principal"> <!--Estira el menú a todo lo ancho y separa los enlaces-->
+                    <a class="nav-link" href="ESIMEZ.html">INICIO</a>
+                    <a class="nav-link" href="PROFESORES.html">PROFESORES</a>
+                    <a class="nav-link" href="MATERIAS.html">MATERIAS</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/marquez-alisson-814869401/">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+   <section class="hero">
+        <div class="container contenido-hero">
+            <h2 class="titulo-hero">Conectando a la <span>Comunidad ICE</span></h2>
+            <p>Encuentra reseñas de profesores, mapas curriculares y noticias de la ESIMEZ.</p>
+            <a href="#reseñar" class="boton-hero">Dejar una Reseña</a>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <h2 class="titulo">Portal de Información y Recursos</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <section class="servicio">
+                    <h3>Mapa curricular</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /><path d="M3 6l0 13" /><path d="M12 6l0 13" /><path d="M21 6l0 13" /></svg>
+                    <p>Consulta el plan de estudios actualizado de la carrera de Ingeniería en Comunicaciones y Electrónica.</p>
+                    <a href="MAPA CURRICULAR.pdf" class="boton" target="_blank">ABRIR</a>
+                </section>
+            </div>
+            <div class="col-12 col-md-4">
+                <section class="servicio">
+                    <h3>SAES</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>
+                    <p>Acceso directo al Sistema de Administración Escolar para inscripciones y consulta de calificaciones.</p>
+                    <a href="https://www.saes.esimez.ipn.mx/" target="_blank" class="boton">IR</a>
+                </section>
+            </div>
+            <div class="col-12 col-md-4">
+                <section class="servicio">
+                    <h3>Página Oficial</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" /></svg>
+                    <p>Visita el sitio oficial de ESIME Zacatenco para avisos institucionales y trámites específicos.</p>
+                    <a href="https://www.esimez.ipn.mx/" target="_blank" class="boton">IR</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <section id="reseñar" class="container mb-5">
+        <h2 class="titulo">Reseña a tus profesores</h2>
+        <div class="row g-5">
+            <div class="col-12 col-lg-8">
+                <form class="formulario">
+                    <fieldset>
+                        <legend>Cuentanos tu experiencia</legend>
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <label>Profesor</label>
+                                <input type="text" placeholder="Nombre completo">
+                            </div>
+                            <div class="campo">
+                                <label>Materia</label>
+                                <input type="text" placeholder="Materia">
+                            </div>
+                            <div class="campo">
+                                <label>Calificación final</label>
+                                <input type="number" placeholder="Calificación">
+                            </div>
+                            <div class="campo">
+                                <label>¿Lo recomiendas?</label>
+                                <div class="d-flex gap-4">
+                                    <div class="opcion-radio">
+                                        <input type="radio" name="preferencia" value="Sí" id="si"> 
+                                        <label for="si">Sí</label>
+                                    </div>
+                                    <div class="opcion-radio">
+                                        <input type="radio" name="preferencia" value="No" id="no"> 
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="campo">
+                                <label>Opinión</label>
+                                <textarea rows="5" placeholder="Escribe tu reseña aquí..."></textarea>
+                            </div>
+                            <div class="mt-4 mb-0">
+                                <input class="boton w-100" type="submit" value="ENVIAR MI RESEÑA">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <aside class="col-12 col-lg-4">
+                <div class="sidebar">
+                    <div class="bloque-lateral mb-4">
+                        <h3>Calendario Escolar</h3>
+                        <div class="calendario-placeholder text-center">
+                            <a href="https://ipn.mx/assets/files/website/img/calendario/calendario-escolarizada.jpg" target="_blank">
+                                <img src="https://ipn.mx/assets/files/website/img/calendario/calendario-escolarizada.jpg" class="img-fluid" alt="Calendario Escolar">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bloque-lateral">
+                        <h3>Últimas Noticias</h3>
+                        <article class="noticia-corta">
+                            <p><strong>07 Abr:</strong> Inicio de inscripciones a ETS.</p>
+                        </article>
+                        <article class="noticia-corta">
+                            <p><strong>15 Abr:</strong> Conferencia magistral en el Auditorio.</p>
+                        </article>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
